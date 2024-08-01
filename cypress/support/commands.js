@@ -9,7 +9,7 @@ Cypress.Commands.add("searchArticleByWord", (word) => {
 })
 
 Cypress.Commands.add("checkResults", (word) => {
-    cy.get('h1[class="page-title ast-archive-title"]').contains("Search Results for: " + word);
+    cy.get('h1[class="page-title ast-archive-title"] > span').contains(word);
 })
 
 Cypress.Commands.add("checkArticle", (word) => {
@@ -22,6 +22,6 @@ Cypress.Commands.add("checkNoResults", () => {
 })
 
 Cypress.Commands.add("checkArticleTitle", (word) => {
-    cy.get('h1[class="page-title ast-archive-title"]').contains("Search Results for: " + word);
+    cy.get('h1[class="page-title ast-archive-title"]').contains("Resultados encontrados para: " + word);
     cy.get('a[rel="bookmark"]').eq(0).contains(word, {matchCase: false});
 })

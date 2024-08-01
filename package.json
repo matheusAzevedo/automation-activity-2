@@ -11,5 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "cypress": "^13.6.5"
+  },
+  "directories": {
+    "doc": "docs"
   }
 }
